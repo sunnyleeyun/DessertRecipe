@@ -9,7 +9,10 @@ import Foundation
 
 final class NetworkManager {
   private let baseUrl = "https://themealdb.com/api/json/v1/1/"
+  
+  
+  
   func fetchDessertRecipe(handler: @escaping ([Meal]) -> Void) {
-    
+    let url = URL(string: baseUrl + "/filter.php?c=Dessert")
   }
 }
