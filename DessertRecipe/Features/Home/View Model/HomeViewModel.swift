@@ -10,7 +10,9 @@ import Foundation
 class HomeViewModel: ObservableObject {
   @Published var meals: [Meal] = []
   
+  private var networkManager: NetworkManager
   init() {
+    networkManager = NetworkManager()
     getDessert()
   }
   
@@ -21,7 +23,7 @@ class HomeViewModel: ObservableObject {
       // @TODO: Set error status
     }
     
-    let networkManager = NetworkManager()
+    
     networkManager.request(fromURL: url, httpMethod: .get) { [weak self] (result: Result<Meals, Error>) in
       guard let self = self else {
         // @TODO: Set error status
@@ -29,7 +31,9 @@ class HomeViewModel: ObservableObject {
       }
       switch result {
       case .success(let response):
-        self.meals = response.meals
+        self.meals = response.meals.sorted(by: { m1, m2 in
+          m1.strMeal < m2.strMeal
+        })
         debugPrint("Success!")
       case .failure(let error):
         debugPrint(error.localizedDescription)

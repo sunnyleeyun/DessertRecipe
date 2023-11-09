@@ -11,7 +11,6 @@ struct HomeView: View {
   @ObservedObject var viewModel = HomeViewModel()
   
   var body: some View {
-    Text("Home View!")
     List(viewModel.meals) { meal in
       Text("\(meal.strMeal)")
     }
