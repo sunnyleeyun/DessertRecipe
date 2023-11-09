@@ -31,15 +31,18 @@ class HomeViewModel: ObservableObject {
       }
       switch result {
       case .success(let response):
-        self.meals = response.meals.sorted(by: { m1, m2 in
-          m1.strMeal < m2.strMeal
-        })
+        self.meals = sortedMeal(response.meals)
         debugPrint("Success!")
       case .failure(let error):
         debugPrint(error.localizedDescription)
         // @TODO: Set error status
       }
     }
-    
+  }
+  
+  private func sortedMeal(_ meals: [Meal]) -> [Meal] {
+    return meals.sorted(by: { m1, m2 in
+      m1.strMeal < m2.strMeal
+    })
   }
 }
