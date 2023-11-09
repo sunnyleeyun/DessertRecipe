@@ -98,8 +98,8 @@
 		AE8A37652AFC355B009017D5 /* DessertRecipe */ = {
 			isa = PBXGroup;
 			children = (
-				AE8A37942AFC4B45009017D5 /* Models */,
-				AE8A37912AFC49C5009017D5 /* Managers */,
+				AE8A37992AFC58E7009017D5 /* Features */,
+				AE8A37912AFC49C5009017D5 /* Services */,
 				AE8A37662AFC355C009017D5 /* DessertRecipeApp.swift */,
 				AE8A37682AFC355C009017D5 /* ContentView.swift */,
 				AE8A376A2AFC355F009017D5 /* Assets.xcassets */,
@@ -133,20 +133,44 @@
 			path = DessertRecipeUITests;
 			sourceTree = "<group>";
 		};
-		AE8A37912AFC49C5009017D5 /* Managers */ = {
+		AE8A37912AFC49C5009017D5 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				AE8A37922AFC49F9009017D5 /* NetworkManager.swift */,
 			);
-			path = Managers;
+			path = Services;
 			sourceTree = "<group>";
 		};
-		AE8A37942AFC4B45009017D5 /* Models */ = {
+		AE8A37942AFC4B45009017D5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				AE8A37952AFC4BBF009017D5 /* Meals.swift */,
 			);
-			path = Models;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AE8A37992AFC58E7009017D5 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				AE8A379A2AFC5926009017D5 /* Meals */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		AE8A379A2AFC5926009017D5 /* Meals */ = {
+			isa = PBXGroup;
+			children = (
+				AE8A379B2AFC5942009017D5 /* View Model */,
+				AE8A37942AFC4B45009017D5 /* Model */,
+			);
+			path = Meals;
+			sourceTree = "<group>";
+		};
+		AE8A379B2AFC5942009017D5 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
