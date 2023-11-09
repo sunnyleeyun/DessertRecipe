@@ -20,6 +20,11 @@
 		AE8A37A22AFC5BF3009017D5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8A37A12AFC5BF3009017D5 /* HomeViewModel.swift */; };
 		AE8A37A42AFC5FA6009017D5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8A37A32AFC5FA6009017D5 /* HomeView.swift */; };
 		AEE946D12AFD8D6600623532 /* RecipeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE946D02AFD8D6600623532 /* RecipeService.swift */; };
+		AEE946D32AFD9CD900623532 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE946D22AFD9CD900623532 /* HomeViewModelTests.swift */; };
+		AEE946D42AFD9D5B00623532 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8A37A12AFC5BF3009017D5 /* HomeViewModel.swift */; };
+		AEE946D62AFD9D6600623532 /* RecipeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE946D02AFD8D6600623532 /* RecipeService.swift */; };
+		AEE946D72AFD9E6800623532 /* Meals.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8A37952AFC4BBF009017D5 /* Meals.swift */; };
+		AEE946D82AFD9EC000623532 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8A37922AFC49F9009017D5 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +61,7 @@
 		AE8A37A12AFC5BF3009017D5 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		AE8A37A32AFC5FA6009017D5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		AEE946D02AFD8D6600623532 /* RecipeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeService.swift; sourceTree = "<group>"; };
+		AEE946D22AFD9CD900623532 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				AE8A37772AFC355F009017D5 /* DessertRecipeTests.swift */,
+				AEE946D22AFD9CD900623532 /* HomeViewModelTests.swift */,
 			);
 			path = DessertRecipeTests;
 			sourceTree = "<group>";
@@ -354,7 +361,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEE946D82AFD9EC000623532 /* NetworkManager.swift in Sources */,
 				AE8A37782AFC355F009017D5 /* DessertRecipeTests.swift in Sources */,
+				AEE946D42AFD9D5B00623532 /* HomeViewModel.swift in Sources */,
+				AEE946D32AFD9CD900623532 /* HomeViewModelTests.swift in Sources */,
+				AEE946D62AFD9D6600623532 /* RecipeService.swift in Sources */,
+				AEE946D72AFD9E6800623532 /* Meals.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

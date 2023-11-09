@@ -25,7 +25,7 @@ import Foundation
       let meals = try await recipeService.fetchRecipes(category: "Dessert")
       self.meals = sortedMeal(meals)
     } catch {
-      
+      debugPrint("Get dessert error")
     }
   }
   
