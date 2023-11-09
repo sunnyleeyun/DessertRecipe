@@ -7,36 +7,25 @@
 
 import Foundation
 
-class HomeViewModel: ObservableObject {
+@MainActor class HomeViewModel: ObservableObject {
+  
   @Published var meals: [Meal] = []
   
-  private var networkManager: NetworkManager
-  init() {
-    networkManager = NetworkManager()
-    getDessert()
+  private var recipeService: RecipeFetching
+  
+  init(recipeFetching: RecipeFetching) {
+    self.recipeService = recipeFetching
+    Task {
+      await getDesserts()
+    }
   }
   
-  
-  func getDessert()  {
-    guard let url = URL(string: "https://themealdb.com/api/json/v1/1/filter.php?c=Dessert") else {
-      fatalError("Invalid Url")
-      // @TODO: Set error status
-    }
-    
-    
-    networkManager.request(fromURL: url, httpMethod: .get) { [weak self] (result: Result<Meals, Error>) in
-      guard let self = self else {
-        // @TODO: Set error status
-        return
-      }
-      switch result {
-      case .success(let response):
-        self.meals = sortedMeal(response.meals)
-        debugPrint("Success!")
-      case .failure(let error):
-        debugPrint(error.localizedDescription)
-        // @TODO: Set error status
-      }
+  func getDesserts() async {
+    do {
+      let meals = try await recipeService.fetchRecipes(category: "Dessert")
+      self.meals = sortedMeal(meals)
+    } catch {
+      
     }
   }
   
@@ -45,4 +34,5 @@ class HomeViewModel: ObservableObject {
       m1.strMeal < m2.strMeal
     })
   }
+  
 }

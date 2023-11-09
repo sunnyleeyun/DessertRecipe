@@ -19,6 +19,7 @@
 		AE8A37A02AFC5A11009017D5 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8A379F2AFC5A11009017D5 /* Recipe.swift */; };
 		AE8A37A22AFC5BF3009017D5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8A37A12AFC5BF3009017D5 /* HomeViewModel.swift */; };
 		AE8A37A42AFC5FA6009017D5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8A37A32AFC5FA6009017D5 /* HomeView.swift */; };
+		AEE946D12AFD8D6600623532 /* RecipeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE946D02AFD8D6600623532 /* RecipeService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		AE8A379F2AFC5A11009017D5 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		AE8A37A12AFC5BF3009017D5 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		AE8A37A32AFC5FA6009017D5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		AEE946D02AFD8D6600623532 /* RecipeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				AE8A37922AFC49F9009017D5 /* NetworkManager.swift */,
+				AEE946D02AFD8D6600623532 /* RecipeService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 			files = (
 				AE8A37962AFC4BBF009017D5 /* Meals.swift in Sources */,
 				AE8A37932AFC49F9009017D5 /* NetworkManager.swift in Sources */,
+				AEE946D12AFD8D6600623532 /* RecipeService.swift in Sources */,
 				AE8A37692AFC355C009017D5 /* ContentView.swift in Sources */,
 				AE8A37672AFC355C009017D5 /* DessertRecipeApp.swift in Sources */,
 				AE8A37A02AFC5A11009017D5 /* Recipe.swift in Sources */,

@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct HomeView: View {
-  @ObservedObject var viewModel = HomeViewModel()
+  @ObservedObject var viewModel = HomeViewModel(recipeFetching: RecipeService(networkManager: NetworkManager()))
   
   var body: some View {
+    Text("Home View")
     List(viewModel.meals) { meal in
       Text("\(meal.strMeal)")
     }
