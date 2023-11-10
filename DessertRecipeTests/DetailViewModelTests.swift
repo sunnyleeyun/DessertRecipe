@@ -31,6 +31,15 @@ final class DetailViewModelTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    @MainActor func testRecipeDetailLoaded() async {
+        let mock = MockRecipeService()
+        let detailVm = DetailViewModel(recipeFetching: mock, meal: Meal(strMeal: "Hot Chocolate Fudge", strMealThumb: "https://www.themealdb.com/images/media/meals/xrysxr1483568462.jpg", idMeal: "52787"))
+        await detailVm.getDessertDetail()
+        XCTAssertEqual(detailVm.mealDetail.strIngredient1, "Chocolate Chips")
+        XCTAssertEqual(detailVm.mealDetail.ingredients.count, 6)
+    }
+
 
 }
 

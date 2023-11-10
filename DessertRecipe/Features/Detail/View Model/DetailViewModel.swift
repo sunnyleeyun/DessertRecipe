@@ -8,15 +8,26 @@
 import Foundation
 
 class DetailViewModel: ObservableObject {
-    @Published var meals: [MealDetail] = []
+    @Published var mealDetail: MealDetail
     
     private var recipeService: RecipeFetching
     
-    init(recipeFetching: RecipeFetching) {
+    init(recipeFetching: RecipeFetching, meal: Meal) {
         self.recipeService = recipeFetching
-//        Task {
-//            await getDesserts()
-//        }
+        mealDetail = MealDetail(meal: meal)
+        
+        Task {
+            await getDessertDetail()
+        }
     }
+    
 
+    func getDessertDetail() async {
+        do {
+            let mealDetail = try await recipeService.fetchRecipeDetail(id: mealDetail.idMeal)
+            self.mealDetail = mealDetail
+        } catch {
+            debugPrint("Get dessert error")
+        }
+    }
 }

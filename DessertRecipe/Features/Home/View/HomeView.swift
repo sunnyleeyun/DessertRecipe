@@ -16,7 +16,7 @@ struct HomeView: View {
         NavigationView {
             List(viewModel.meals) { meal in
                 ZStack(alignment: .leading) {
-                    NavigationLink(destination: DetailView())  {
+                    NavigationLink(destination: DetailView(meal: meal))  {
                         EmptyView()
                     }.opacity(0)
                     VStack {

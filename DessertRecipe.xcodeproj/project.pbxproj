@@ -29,6 +29,8 @@
 		AEE946DE2AFDB3BA00623532 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE946DD2AFDB3BA00623532 /* DetailViewModel.swift */; };
 		AEE946E02AFDB42600623532 /* DetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE946DF2AFDB42600623532 /* DetailViewModelTests.swift */; };
 		AEE946E22AFDB48200623532 /* MockRecipeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE946E12AFDB48200623532 /* MockRecipeService.swift */; };
+		AEE946E32AFDB86D00623532 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE946DD2AFDB3BA00623532 /* DetailViewModel.swift */; };
+		AEE946E42AFDBAD300623532 /* MealDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8A379F2AFC5A11009017D5 /* MealDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -395,6 +397,8 @@
 				AE8A37782AFC355F009017D5 /* DessertRecipeTests.swift in Sources */,
 				AEE946D42AFD9D5B00623532 /* HomeViewModel.swift in Sources */,
 				AEE946E02AFDB42600623532 /* DetailViewModelTests.swift in Sources */,
+				AEE946E32AFDB86D00623532 /* DetailViewModel.swift in Sources */,
+				AEE946E42AFDBAD300623532 /* MealDetails.swift in Sources */,
 				AEE946D32AFD9CD900623532 /* HomeViewModelTests.swift in Sources */,
 				AEE946E22AFDB48200623532 /* MockRecipeService.swift in Sources */,
 				AEE946D62AFD9D6600623532 /* RecipeService.swift in Sources */,
