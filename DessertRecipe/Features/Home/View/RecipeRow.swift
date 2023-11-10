@@ -40,6 +40,7 @@ struct RecipeRow: View {
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
                     .stroke(Color(.sRGB, red: 0.5, green: 0.5, blue: 0.5, opacity: 0.5), lineWidth: 1)
+                    .shadow(color: .gray, radius: 10, x: 0, y: 2)
             )
             .padding([.top, .horizontal])
         }
