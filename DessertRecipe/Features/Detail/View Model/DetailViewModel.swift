@@ -18,8 +18,6 @@ class DetailViewModel: ObservableObject {
         
         Task {
             await getDessertDetail()
-            debugPrint("mealDetail.ingredients.count")
-            debugPrint(mealDetail.ingredients.count)
         }
     }
     

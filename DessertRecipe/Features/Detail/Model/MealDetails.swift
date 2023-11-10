@@ -117,11 +117,11 @@ struct MealDetail: Identifiable, Codable {
 class Ingredient: Identifiable, Decodable, Hashable {
     
     let id = UUID()
-    let ingredient: String
+    let element: String
     let measure : String
     
     init(ingredient: String, measure: String) {
-        self.ingredient = ingredient
+        self.element = ingredient
         self.measure = measure
     }
     

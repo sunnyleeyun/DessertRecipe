@@ -43,10 +43,9 @@ struct DetailView: View {
                     }
                     
                     Text(viewModel.mealDetail.strMeal)
-                        .font(.headline).padding(.top, 16)
+                        .font(.title).padding(.top, 16)
                     
-                    Text(viewModel.mealDetail.strInstructions ?? "")
-                        .font(.body)
+                    
                 }.padding().padding(.top, 32)
                 
                 Text("Ingredients")
@@ -54,7 +53,7 @@ struct DetailView: View {
                 
                 ForEach(viewModel.mealDetail.ingredients, id: \.self) { ingredient in
                     HStack {
-                        Text(ingredient.ingredient)
+                        Text(ingredient.element)
                             .foregroundColor(.secondary)
                             .padding().padding(.leading, 12)
                         
@@ -65,8 +64,12 @@ struct DetailView: View {
                             .padding().padding(.trailing, 36)
                     }
                 }
-
                 
+                Text("Instructions")
+                    .font(.headline).padding().padding(.top, 16)
+
+                Text(viewModel.mealDetail.strInstructions ?? "")
+                    .font(.body).padding().padding(.top, 4)
             }
         }
         .edgesIgnoringSafeArea(.top)
