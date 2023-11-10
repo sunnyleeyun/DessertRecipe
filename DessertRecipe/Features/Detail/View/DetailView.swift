@@ -14,63 +14,26 @@ struct DetailView: View {
         viewModel = DetailViewModel(recipeFetching: RecipeService(networkManager: NetworkManager()), meal: meal)
     }
     
-    private let aspect = 1.5
-    
-    
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading) {
-                AsyncImage(url: URL(string: viewModel.mealDetail.strMealThumb)) { image in
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(height: 300)
-                } placeholder: {
-                    ProgressView()
-                }
-                
-                VStack(alignment: .leading, spacing: 8) {
-                    HStack {
-                        Text(viewModel.mealDetail.strCategory ?? "")
-                            .foregroundColor(.secondary)
-                            .font(.caption)
-                        
-                        Spacer()
-                        
-                        Text("#\(viewModel.mealDetail.idMeal)")
-                            .foregroundColor(.secondary)
-                            .font(.caption)
-                    }
-                    
-                    Text(viewModel.mealDetail.strMeal)
-                        .font(.title).padding(.top, 16)
-                    
-                    
-                }.padding().padding(.top, 32)
-                
-                Text("Ingredients")
-                    .font(.headline).padding().padding(.top, 16)
-                
+            HeaderView(imageURL: viewModel.mealDetail.strMealThumb)
+            
+            InformationView(category: viewModel.mealDetail.strCategory,
+                            mealID: viewModel.mealDetail.idMeal,
+                            mealName: viewModel.mealDetail.strMeal)
+                .padding(.top, 32)
+            
+            SectionView(title: "Ingredients", content: {
                 ForEach(viewModel.mealDetail.ingredients, id: \.self) { ingredient in
-                    HStack {
-                        Text(ingredient.element)
-                            .foregroundColor(.secondary)
-                            .padding().padding(.leading, 12)
-                        
-                        Spacer()
-                        
-                        Text(ingredient.measure)
-                            .foregroundColor(.secondary)
-                            .padding().padding(.trailing, 36)
-                    }
+                    IngredientRow(name: ingredient.element, measure: ingredient.measure)
                 }
-                
-                Text("Instructions")
-                    .font(.headline).padding().padding(.top, 16)
-
+            })
+            
+            SectionView(title: "Instructions", content: {
                 Text(viewModel.mealDetail.strInstructions ?? "")
-                    .font(.body).padding().padding(.top, 4)
-            }
+                    .font(.body)
+                    .padding(.top, 4)
+            })
         }
         .edgesIgnoringSafeArea(.top)
     }
