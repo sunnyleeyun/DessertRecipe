@@ -31,6 +31,8 @@
 		AEE946E22AFDB48200623532 /* MockRecipeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE946E12AFDB48200623532 /* MockRecipeService.swift */; };
 		AEE946E32AFDB86D00623532 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE946DD2AFDB3BA00623532 /* DetailViewModel.swift */; };
 		AEE946E42AFDBAD300623532 /* MealDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8A379F2AFC5A11009017D5 /* MealDetails.swift */; };
+		AEE946E62AFEB48B00623532 /* RecipeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE946E52AFEB48B00623532 /* RecipeRow.swift */; };
+		AEE946E82AFEB4A800623532 /* RecipeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE946E72AFEB4A800623532 /* RecipeListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		AEE946DD2AFDB3BA00623532 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		AEE946DF2AFDB42600623532 /* DetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelTests.swift; sourceTree = "<group>"; };
 		AEE946E12AFDB48200623532 /* MockRecipeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRecipeService.swift; sourceTree = "<group>"; };
+		AEE946E52AFEB48B00623532 /* RecipeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRow.swift; sourceTree = "<group>"; };
+		AEE946E72AFEB4A800623532 /* RecipeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +222,8 @@
 			isa = PBXGroup;
 			children = (
 				AE8A37A32AFC5FA6009017D5 /* HomeView.swift */,
+				AEE946E72AFEB4A800623532 /* RecipeListView.swift */,
+				AEE946E52AFEB48B00623532 /* RecipeRow.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -379,8 +385,10 @@
 				AE8A37962AFC4BBF009017D5 /* Meals.swift in Sources */,
 				AEE946DB2AFDAE2500623532 /* DetailView.swift in Sources */,
 				AE8A37932AFC49F9009017D5 /* NetworkManager.swift in Sources */,
+				AEE946E62AFEB48B00623532 /* RecipeRow.swift in Sources */,
 				AEE946DE2AFDB3BA00623532 /* DetailViewModel.swift in Sources */,
 				AEE946D12AFD8D6600623532 /* RecipeService.swift in Sources */,
+				AEE946E82AFEB4A800623532 /* RecipeListView.swift in Sources */,
 				AE8A37692AFC355C009017D5 /* ContentView.swift in Sources */,
 				AE8A37672AFC355C009017D5 /* DessertRecipeApp.swift in Sources */,
 				AE8A37A02AFC5A11009017D5 /* MealDetails.swift in Sources */,
