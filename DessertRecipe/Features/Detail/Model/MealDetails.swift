@@ -8,11 +8,11 @@
 import Foundation
 
 // @TODO: add design rationale of merging and splitting the models
-struct Recipes: Codable {
-    let meals: [RecipeDetail]
+struct MealDetails: Codable {
+    let meals: [MealDetail]
 }
 
-struct RecipeDetail: Codable {
+struct MealDetail: Codable {
     let idMeal: String
     let strMeal: String
     let strDrinkAlternate: String?
