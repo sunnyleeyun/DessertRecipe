@@ -13,7 +13,10 @@ struct RecipeListView: View {
     var body: some View {
         List(viewModel.meals) { meal in
             RecipeRow(meal: meal)
+                .listRowSeparator(.hidden)
         }
+        .listStyle(PlainListStyle())
+        .background(Color.clear)
     }
 }
 

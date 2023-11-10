@@ -13,27 +13,33 @@ struct RecipeRow: View {
     
     var body: some View {
         ZStack(alignment: .leading) {
-            NavigationLink(destination: DetailView(meal: meal)) {
-                EmptyView().opacity(0)
-            }
+            NavigationLink(destination: DetailView(meal: meal).toolbarRole(.editor)) {
+                EmptyView()
+            }.opacity(0)
             
             VStack {
                 AsyncImage(url: URL(string: meal.strMealThumb)) { image in
-                    image.resizable()
+                    image.resizable().aspectRatio(aspect, contentMode: .fill)
                 } placeholder: {
                     ProgressView()
                 }
-                .aspectRatio(aspect, contentMode: .fill)
                 
-                Text(meal.strMeal)
-                    .font(.headline)
-                    .foregroundColor(.secondary)
-                    .padding()
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text("\(meal.strMeal)")
+                            .font(.headline)
+                            .foregroundColor(.secondary)
+                    }
+                    .layoutPriority(100)
+                    Spacer()
+                }
+                .padding()
+                
             }
             .cornerRadius(10)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color(.sRGB, red: 150/255, green: 150/255, blue: 150/255, opacity: 0.1), lineWidth: 1)
+                    .stroke(Color(.sRGB, red: 0.5, green: 0.5, blue: 0.5, opacity: 0.5), lineWidth: 1)
             )
             .padding([.top, .horizontal])
         }

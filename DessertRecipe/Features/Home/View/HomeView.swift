@@ -14,7 +14,7 @@ struct HomeView: View {
         NavigationView {
             RecipeListView(viewModel: viewModel)
                 .navigationTitle("Desserts")
-        }
+        }.accentColor(.black)
     }
 }
 
