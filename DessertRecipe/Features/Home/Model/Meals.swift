@@ -18,5 +18,11 @@ struct Meal: Codable, Identifiable {
     let strMeal: String
     let strMealThumb: String
     let idMeal: String
+    
+    init(strMeal: String, strMealThumb: String, idMeal: String) {
+        self.strMeal = strMeal
+        self.strMealThumb = strMealThumb
+        self.idMeal = idMeal
+    }
 }
 
