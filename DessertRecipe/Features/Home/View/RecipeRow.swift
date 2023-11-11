@@ -19,10 +19,14 @@ struct RecipeRow: View {
             }.opacity(0)
             
             VStack {
-                AsyncImage(url: URL(string: meal.strMealThumb)) { image in
-                    image.resizable().aspectRatio(aspect, contentMode: .fill)
-                } placeholder: {
-                    ProgressView()
+                
+                CacheAsyncImage(url: URL(string: meal.strMealThumb)!) { phase in
+                    switch phase {
+                    case .success(let image):
+                        image.resizable().aspectRatio(aspect, contentMode: .fill)
+                    default:
+                        ProgressView()
+                    }
                 }
                 
                 HStack {
