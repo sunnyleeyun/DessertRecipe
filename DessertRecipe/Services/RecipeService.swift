@@ -30,7 +30,6 @@ class RecipeService: RecipeFetching {
                 switch result {
                 case .success(let response):
                     continuation.resume(returning: response.meals)
-                    debugPrint("Success fetch recipes!")
                 case .failure(let error):
                     debugPrint(error.localizedDescription)
                     continuation.resume(returning: [])
@@ -56,7 +55,6 @@ class RecipeService: RecipeFetching {
                         continuation.resume(throwing: customError)
                     }
                     
-                    debugPrint("Success fetch recipe detail \(id)!")
                 case .failure(let error):
                     debugPrint(error.localizedDescription)
                     continuation.resume(throwing: error)
