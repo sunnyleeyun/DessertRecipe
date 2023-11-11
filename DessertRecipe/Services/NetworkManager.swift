@@ -7,7 +7,6 @@
 
 import Foundation
 
-// @TODO: Add doc, and design rationale
 class NetworkManager {
     
     enum ManagerErrors: Error {
@@ -23,7 +22,6 @@ class NetworkManager {
     
     func request<T: Decodable>(fromURL url: URL, httpMethod: HttpMethod = .get, completion: @escaping (Result<T, Error>) -> Void) {
         
-        // URLSession returns on the queue it creates for the request, thus ensure same queue
         let completionOnMain: (Result<T, Error>) -> Void = { result in
             DispatchQueue.main.async {
                 completion(result)
