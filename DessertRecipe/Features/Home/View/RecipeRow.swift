@@ -13,7 +13,8 @@ struct RecipeRow: View {
     
     var body: some View {
         ZStack(alignment: .leading) {
-            NavigationLink(destination: DetailView(meal: meal).toolbarRole(.editor)) {
+            
+            NavigationLink(destination: NavigationLazyView(DetailView(meal: meal)).toolbarRole(.editor)) {
                 EmptyView()
             }.opacity(0)
             

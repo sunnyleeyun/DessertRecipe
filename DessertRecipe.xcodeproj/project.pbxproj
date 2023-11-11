@@ -37,6 +37,7 @@
 		AEE946EC2AFEB9DD00623532 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE946EB2AFEB9DD00623532 /* InformationView.swift */; };
 		AEE946EE2AFEB9F400623532 /* IngredientRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE946ED2AFEB9F400623532 /* IngredientRow.swift */; };
 		AEE946F02AFEBA0A00623532 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE946EF2AFEBA0A00623532 /* SectionView.swift */; };
+		AEE946F22AFFFAD700623532 /* NavigationLazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE946F12AFFFAD700623532 /* NavigationLazyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		AEE946EB2AFEB9DD00623532 /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
 		AEE946ED2AFEB9F400623532 /* IngredientRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientRow.swift; sourceTree = "<group>"; };
 		AEE946EF2AFEBA0A00623532 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
+		AEE946F12AFFFAD700623532 /* NavigationLazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLazyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +249,7 @@
 		AEE946D92AFDAE0100623532 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AEE946F12AFFFAD700623532 /* NavigationLazyView.swift */,
 				AEE946DA2AFDAE2500623532 /* DetailView.swift */,
 				AEE946E92AFEB9C400623532 /* HeaderView.swift */,
 				AEE946EB2AFEB9DD00623532 /* InformationView.swift */,
@@ -396,6 +399,7 @@
 			files = (
 				AEE946EE2AFEB9F400623532 /* IngredientRow.swift in Sources */,
 				AE8A37962AFC4BBF009017D5 /* Meals.swift in Sources */,
+				AEE946F22AFFFAD700623532 /* NavigationLazyView.swift in Sources */,
 				AEE946DB2AFDAE2500623532 /* DetailView.swift in Sources */,
 				AE8A37932AFC49F9009017D5 /* NetworkManager.swift in Sources */,
 				AEE946E62AFEB48B00623532 /* RecipeRow.swift in Sources */,
