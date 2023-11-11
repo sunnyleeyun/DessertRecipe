@@ -15,27 +15,33 @@ struct DetailView: View {
     }
     
     var body: some View {
-        ScrollView {
-            HeaderView(imageURL: viewModel.mealDetail.strMealThumb)
-            
-            InformationView(category: viewModel.mealDetail.strCategory,
-                            mealID: viewModel.mealDetail.idMeal,
-                            mealName: viewModel.mealDetail.strMeal)
+        if viewModel.isLoading {
+            LoadingView()
+        } else if viewModel.isError {
+            ErrorView()
+        } else {
+            ScrollView {
+                HeaderView(imageURL: viewModel.mealDetail.strMealThumb)
+                
+                InformationView(category: viewModel.mealDetail.strCategory,
+                                mealID: viewModel.mealDetail.idMeal,
+                                mealName: viewModel.mealDetail.strMeal)
                 .padding(.top, 32)
-            
-            SectionView(title: "Ingredients", content: {
-                ForEach(viewModel.mealDetail.ingredients, id: \.self) { ingredient in
-                    IngredientRow(name: ingredient.element, measure: ingredient.measure)
-                }
-            })
-            
-            SectionView(title: "Instructions", content: {
-                Text(viewModel.mealDetail.strInstructions ?? "")
-                    .font(.body)
-                    .padding(.top, 4)
-            })
+                
+                SectionView(title: "Ingredients", content: {
+                    ForEach(viewModel.mealDetail.ingredients, id: \.self) { ingredient in
+                        IngredientRow(name: ingredient.element, measure: ingredient.measure)
+                    }
+                })
+                
+                SectionView(title: "Instructions", content: {
+                    Text(viewModel.mealDetail.strInstructions ?? "")
+                        .font(.body)
+                        .padding(.top, 4)
+                })
+            }
+            .edgesIgnoringSafeArea(.top)
         }
-        .edgesIgnoringSafeArea(.top)
     }
 }
 

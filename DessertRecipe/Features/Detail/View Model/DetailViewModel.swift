@@ -9,6 +9,8 @@ import Foundation
 
 @MainActor class DetailViewModel: ObservableObject {
     @Published var mealDetail: MealDetail
+    @Published var isLoading: Bool = true
+    @Published var isError: Bool = false
     
     private var recipeService: RecipeFetching
     
@@ -26,8 +28,10 @@ import Foundation
         do {
             let mealDetail = try await recipeService.fetchRecipeDetail(id: mealDetail.idMeal)
             self.mealDetail = mealDetail
+            self.isLoading = false
         } catch {
-            debugPrint("Get dessert error")
+            isLoading = false
+            isError = true
         }
     }
 }

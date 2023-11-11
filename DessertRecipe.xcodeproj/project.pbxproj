@@ -39,6 +39,8 @@
 		AEE946F02AFEBA0A00623532 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE946EF2AFEBA0A00623532 /* SectionView.swift */; };
 		AEE946F22AFFFAD700623532 /* NavigationLazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE946F12AFFFAD700623532 /* NavigationLazyView.swift */; };
 		AEE946F62B0001F800623532 /* CacheAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE946F52B0001F800623532 /* CacheAsyncImage.swift */; };
+		AEE946F82B00046C00623532 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE946F72B00046C00623532 /* ErrorView.swift */; };
+		AEE946FA2B00048300623532 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE946F92B00048300623532 /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,8 @@
 		AEE946EF2AFEBA0A00623532 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
 		AEE946F12AFFFAD700623532 /* NavigationLazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLazyView.swift; sourceTree = "<group>"; };
 		AEE946F52B0001F800623532 /* CacheAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheAsyncImage.swift; sourceTree = "<group>"; };
+		AEE946F72B00046C00623532 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		AEE946F92B00048300623532 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,6 +286,8 @@
 			children = (
 				AEE946F12AFFFAD700623532 /* NavigationLazyView.swift */,
 				AEE946F52B0001F800623532 /* CacheAsyncImage.swift */,
+				AEE946F72B00046C00623532 /* ErrorView.swift */,
+				AEE946F92B00048300623532 /* LoadingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -418,6 +424,7 @@
 			files = (
 				AEE946EE2AFEB9F400623532 /* IngredientRow.swift in Sources */,
 				AE8A37962AFC4BBF009017D5 /* Meals.swift in Sources */,
+				AEE946F82B00046C00623532 /* ErrorView.swift in Sources */,
 				AEE946F22AFFFAD700623532 /* NavigationLazyView.swift in Sources */,
 				AEE946DB2AFDAE2500623532 /* DetailView.swift in Sources */,
 				AE8A37932AFC49F9009017D5 /* NetworkManager.swift in Sources */,
@@ -428,6 +435,7 @@
 				AEE946EC2AFEB9DD00623532 /* InformationView.swift in Sources */,
 				AE8A37692AFC355C009017D5 /* ContentView.swift in Sources */,
 				AE8A37672AFC355C009017D5 /* DessertRecipeApp.swift in Sources */,
+				AEE946FA2B00048300623532 /* LoadingView.swift in Sources */,
 				AE8A37A02AFC5A11009017D5 /* MealDetails.swift in Sources */,
 				AEE946F02AFEBA0A00623532 /* SectionView.swift in Sources */,
 				AE8A37A22AFC5BF3009017D5 /* HomeViewModel.swift in Sources */,
