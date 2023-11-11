@@ -7,7 +7,7 @@
 
 import Foundation
 
-class DetailViewModel: ObservableObject {
+@MainActor class DetailViewModel: ObservableObject {
     @Published var mealDetail: MealDetail
     
     private var recipeService: RecipeFetching
