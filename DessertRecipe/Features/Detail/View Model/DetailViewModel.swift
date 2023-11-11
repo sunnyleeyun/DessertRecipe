@@ -30,8 +30,8 @@ import Foundation
             self.mealDetail = mealDetail
             self.isLoading = false
         } catch {
-            isLoading = false
-            isError = true
+            self.isLoading = false
+            self.isError = true
         }
     }
 }

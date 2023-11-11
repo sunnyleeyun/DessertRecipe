@@ -10,6 +10,8 @@ import Foundation
 @MainActor class HomeViewModel: ObservableObject {
     
     @Published var meals: [Meal] = []
+    @Published var isLoading: Bool = true
+    @Published var isError: Bool = false
     
     private var recipeService: RecipeFetching
     
@@ -24,8 +26,10 @@ import Foundation
         do {
             let meals = try await recipeService.fetchRecipes(category: "Dessert")
             self.meals = sortedMeal(meals)
+            self.isLoading = false
         } catch {
-            debugPrint("Get dessert error")
+            self.isLoading = false
+            self.isError = true
         }
     }
     

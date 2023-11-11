@@ -7,7 +7,6 @@
 
 import Foundation
 
-// @TODO: add design rationale of merging and splitting the models
 struct MealDetails: Codable {
     let meals: [MealDetail]
 }
@@ -116,7 +115,7 @@ struct MealDetail: Identifiable, Codable {
 
 class Ingredient: Identifiable, Decodable, Hashable {
     
-    let id = UUID()
+    var id = UUID()
     let element: String
     let measure : String
     

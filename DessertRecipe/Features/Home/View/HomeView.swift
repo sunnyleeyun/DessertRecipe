@@ -11,10 +11,16 @@ struct HomeView: View {
     @ObservedObject var viewModel = HomeViewModel(recipeFetching: RecipeService(networkManager: NetworkManager()))
     
     var body: some View {
-        NavigationView {
-            RecipeListView(viewModel: viewModel)
-                .navigationTitle("Desserts")
-        }.accentColor(.black)
+        if viewModel.isLoading {
+            LoadingView()
+        } else if viewModel.isError {
+            ErrorView()
+        } else {
+            NavigationView {
+                RecipeListView(viewModel: viewModel)
+                    .navigationTitle("Desserts")
+            }.accentColor(.black)
+        }
     }
 }
 
